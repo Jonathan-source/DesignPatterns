@@ -103,7 +103,7 @@ int main()
 	{
 		std::cout << "The water is currently in '" << currentState << "' state\n";
 
-	input_state: // It's just a demo, and hopefully my teacher will not see this...
+	option_input: // It's just a demo, and hopefully my teacher will not see this...
 
 		int index{ 0 };
 		for (const auto& item : rules[currentState])
@@ -116,11 +116,11 @@ int main()
 		if (input < 0 || (input + 1) > rules[currentState].size())
 		{
 			std::cout << "Invalid option. Please try again.\n";
-			goto input_state;
+			goto option_input;
 		}
 
 		currentState = rules[currentState][input].second;
-		if (currentState == exitState) break;
+		if (currentState == exitState) isRunning = false;
 	}
 
 	std::cout << "Thank you for testing my StateMachine!\n";
