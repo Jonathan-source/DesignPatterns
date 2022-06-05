@@ -103,7 +103,7 @@ int main()
 	{
 		std::cout << "The water is currently in '" << currentState << "' state\n";
 
-	select_trigger: // It's just a demo, and hopefully my teacher will not see this...
+	input_state: // It's just a demo, and hopefully my teacher will not see this...
 
 		int index{ 0 };
 		for (const auto& item : rules[currentState])
@@ -116,7 +116,7 @@ int main()
 		if (input < 0 || (input + 1) > rules[currentState].size())
 		{
 			std::cout << "Invalid option. Please try again.\n";
-			goto select_trigger;
+			goto input_state;
 		}
 
 		currentState = rules[currentState][input].second;
