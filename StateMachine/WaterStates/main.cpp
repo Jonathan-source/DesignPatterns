@@ -73,7 +73,7 @@ int main()
 	TransitionTable rules{ };
 
 	// Defining the transitions rules: 
-	// [main state]{ available triggers & resulting states }
+	// [main state]{ available triggers &  their resulting states }
 	rules[EState::Liquid] = {
 		{ ETrigger::Freezing, EState::Ice },
 		{ ETrigger::Vaporiaztion, EState::Vapor },
