@@ -39,15 +39,15 @@ inline std::ostream& operator<<(std::ostream &os, const ETrigger &trigger)
 {
 	switch (trigger)
 	{
-		case ETrigger::Melting:			os << "Melting";		break;	
-		case ETrigger::Freezing:		os << "Freezing";		break;
-		case ETrigger::Sublimation:		os << "Sublimation";	break;
-		case ETrigger::Deposition:		os << "Deposition";		break;
+		case ETrigger::Melting:		os << "Melting";	break;	
+		case ETrigger::Freezing:	os << "Freezing";	break;
+		case ETrigger::Sublimation:	os << "Sublimation";	break;
+		case ETrigger::Deposition:	os << "Deposition";	break;
 		case ETrigger::Vaporiaztion:	os << "Vaporiaztion";	break;
 		case ETrigger::Condensation:	os << "Condensation";	break;
-		case ETrigger::Ionization:		os << "Ionization";		break;
+		case ETrigger::Ionization:	os << "Ionization";	break;
 		case ETrigger::Deionization:	os << "Deionization";	break;
-		case ETrigger::Exit:			os << "Exit";			break;
+		case ETrigger::Exit:		os << "Exit";		break;
 		default: break;
 	}
 	return os;
@@ -58,8 +58,8 @@ inline std::ostream& operator<<(std::ostream& os, const EState& state)
 	switch (state)
 	{
 		case EState::Liquid:	os << "Liquid";	break;
-		case EState::Vapor:		os << "Vapor";	break;
-		case EState::Ice:		os << "Ice";	break;
+		case EState::Vapor:	os << "Vapor";	break;
+		case EState::Ice:	os << "Ice";	break;
 		case EState::Plasma:	os << "Plasma";	break;
 		default: break;
 	}
@@ -72,7 +72,7 @@ int main()
 	typedef std::unordered_map<EState, std::vector<std::pair<ETrigger, EState>>> TransitionTable;
 	TransitionTable rules{ };
 
-	// Define the transitions rules: 
+	// Defining the transitions rules: 
 	// [main state]{ available triggers & resulting states }
 	rules[EState::Liquid] = {
 		{ ETrigger::Freezing, EState::Ice },
@@ -103,7 +103,7 @@ int main()
 	{
 		std::cout << "The water is currently in '" << currentState << "' state\n";
 
-	select_trigger: // It's just a demo, and my teacher will not see this, I hope...
+	select_trigger: // It's just a demo, and hopefully my teacher will not see this...
 
 		int index{ 0 };
 		for (const auto& item : rules[currentState])
@@ -123,7 +123,7 @@ int main()
 		if (currentState == exitState) break;
 	}
 
-	std::cout << "Thank you for trying out my StateMachine!\n";
+	std::cout << "Thank you for testing my StateMachine!\n";
 
 	return 0;
 }
