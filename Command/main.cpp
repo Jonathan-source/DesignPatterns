@@ -53,8 +53,7 @@ public:
 	virtual ~MovePlayerCommand() = default;
 
 	void Execute() override {
-		switch (m_action) 
-		{
+		switch (m_action) {
 			case EAction::Up:	m_player.y -= 1; break;
 			case EAction::Down:	m_player.y += 1; break;
 			case EAction::Left:	m_player.x -= 1; break;
@@ -64,13 +63,12 @@ public:
 	}
 
 	void Undo() override {
-		switch (m_action)
-		{
-		case EAction::Up:	m_player.y += 1; break;
-		case EAction::Down:	m_player.y -= 1; break;
-		case EAction::Left:	m_player.x += 1; break;
-		case EAction::Right:	m_player.x -= 1; break;
-		default: break;
+		switch (m_action) {
+			case EAction::Up:	m_player.y += 1; break;
+			case EAction::Down:	m_player.y -= 1; break;
+			case EAction::Left:	m_player.x += 1; break;
+			case EAction::Right:	m_player.x -= 1; break;
+			default: break;
 		}
 	}
 
