@@ -4,8 +4,8 @@
 	In this example an 'Invoker' is given a number of 'MoveCommands', that
 	commands the movement of the receiver ('Player'), which can be ivoked by
 	the Invoker without knowing the details of the action that is performed.
-	All the information required for executing the action is stored in the command
-	object. 
+	All the information required for executing the action is stored in the concrete
+	command	object. 
 
 	Updated: 2022-06-06
 	Author: Jonathan Helsing
