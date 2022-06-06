@@ -49,7 +49,7 @@ public:
 		, m_action(action)
 	{
 	}
-
+	MovePlayerCommand() = delete;
 	virtual ~MovePlayerCommand() = default;
 
 	void Execute() override {
