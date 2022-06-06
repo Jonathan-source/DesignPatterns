@@ -26,9 +26,8 @@
 template<typename R, typename... Args>
 class FuncLogger {
 public:
-	FuncLogger(const std::function<R(Args...)>& func, const char* funcName)
+	FuncLogger(const std::function<R(Args...)>& func)
 		: m_func(func)
-		, m_funcName(funcName)
 		, m_start()
 		, m_stop()
 		, m_duration()
@@ -53,7 +52,6 @@ public:
 
 private:
 	std::function<R(Args...)> m_func;
-	const char* m_funcName;
 	std::chrono::steady_clock::time_point m_start;
 	std::chrono::steady_clock::time_point m_stop;
 	std::chrono::nanoseconds m_duration;
@@ -62,11 +60,8 @@ private:
 
 // Utility function for creating the 'FuncLogger' class.
 template<typename R, typename... Args>
-auto CreateFuncLogger(R(*func)(Args...), const char* name) {
-	return FuncLogger< R, Args... >(
-		std::function<R(Args...)>(func),
-		name
-	);
+auto CreateFuncLogger(R(*func)(Args...)) {
+	return FuncLogger<R, Args...>(std::function<R(Args...)>(func));
 }
 
 /**
@@ -79,7 +74,7 @@ int Add(int a, int b, int c) {
 
 int main()
 {
-	auto logged_Add{ CreateFuncLogger(Add, "Add") };
+	auto logged_Add{ CreateFuncLogger(Add) };
 
 	int sum{ 0 };
 	for (int i = 0; i < 100; i++)	{
