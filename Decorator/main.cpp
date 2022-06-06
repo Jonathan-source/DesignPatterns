@@ -20,6 +20,9 @@
 #include <algorithm>
 #include <numeric>
 
+/**
+ * The object/decorator in which the function will be wrapped into.  
+ */
 template<typename R, typename... Args>
 class FuncLogger {
 public:
@@ -66,7 +69,9 @@ auto CreateFuncLogger(R(*func)(Args...), const char* name) {
 	);
 }
 
-// A simple function for demo purposes. 
+/**
+ * The function that will be decorated.  
+ */
 int Add(int a, int b, int c) {
 	return a + b + c;
 }
