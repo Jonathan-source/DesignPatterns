@@ -83,15 +83,15 @@ private:
 class Invoker {
 public:
 	void Execute() {
-		for (auto cmd = m_commands.begin(); 
-			cmd != m_commands.end();
-			++cmd) { cmd->Execute(); }
+		for (auto cmd = m_commands.begin(); cmd != m_commands.end(); ++cmd) { 
+			cmd->Execute(); 
+		}
 	}
 
 	void Undo() {
-		for (auto cmd = m_commands.rbegin();
-			cmd != m_commands.rend();
-			++cmd) { cmd->Undo(); }
+		for (auto cmd = m_commands.rbegin(); cmd != m_commands.rend(); ++cmd) { 
+			cmd->Undo(); 
+		}
 	}
 
 	void AddCommand(const MovePlayerCommand& command) {
