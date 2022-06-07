@@ -4,7 +4,10 @@
     the event-driven programming paradigm and lets us define loosely 
     coupled systems. Whenever an observable object changes its state, 
     its corresponding observer classes are notified and, only then,
-    executes their behaviours.
+    executes their behaviours. In this particular example, whenever the
+    player has killed a critter, all the player's subscribers is notified
+    by the event (CRITTER_KILLED), upon which a sound effect is played 
+    and the scoreboard is updated. 
 
     Updated: 2022-06-07
     Author: Jonathan Helsing [github.com/Jonathan-source]
