@@ -9,7 +9,7 @@
 	of its return-type or arguments.
 
 	Updated: 2022-06-06
-	Author: Jonathan Helsing
+	Author: Jonathan Helsing [github.com/Jonathan-source]
 */
 
 #include <iostream>
