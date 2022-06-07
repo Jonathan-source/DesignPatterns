@@ -5,7 +5,7 @@
 	without specifying their concrete classes, and keeping initialization in one place.
 	
 	Updated: 2022-06-05
-	Author: Jonathan Helsing
+	Author: Jonathan Helsing [github.com/Jonathan-source]
 */
 
 #include "HotDrinkFactories.h"
