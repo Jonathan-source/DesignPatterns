@@ -17,6 +17,7 @@
 #include <string>
 #include <memory>
 
+// TODO: make a safer version using mutex and safe pointers.
 //#include <windows.h>
 //#include <mmsystem.h>
 
@@ -84,8 +85,7 @@ public:
     NotifyAction OnNotify(Player& subject, const Event& event) override
     {
         if (event == Event::CRITTER_KILLED)
-        {
-            // TODO: make a safer version using mutex.
+        {       
             std::cout << R"(PlaySoundW(TEXT("critter_killed.wav"), NULL, SND_FILENAME | SND_ASYNC);)" << std::endl;
         }
 
