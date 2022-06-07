@@ -17,7 +17,7 @@
 #include <string>
 #include <memory>
 
-// TODO: make a safer version using mutex and safe pointers.
+// TODO: make a safer version using mutex and smart pointers
 //#include <windows.h>
 //#include <mmsystem.h>
 
