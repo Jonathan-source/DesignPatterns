@@ -71,7 +71,7 @@ int main()
 	auto logged_Add{ CreateFuncLogger(Add) };
 
 	int sum{ 0 };
-	for (int i = 0; i < 100; i++) {
+	for (int i = 0; i < 100; ++i) {
 		sum = logged_Add(sum, i, (i * i));
 	}
 
@@ -84,7 +84,7 @@ int main()
 			<< ". "
 			<< rec.count() // nanoseconds.
 			// << std::chrono::duration_cast<std::chrono::microseconds>(rec).count() // microseconds.
-			<< " us\n";
+			<< " ns\n";
 	}
 
 	return 0;
