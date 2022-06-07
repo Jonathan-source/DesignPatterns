@@ -4,7 +4,7 @@
 	I used the UML state machine diagram, that was uploaded with this code, to create the transition rules.
 
 	Updated: 2022-06-05
-	Author: Jonathan Helsing
+	Author: Jonathan Helsing [github.com/Jonathan-source]
 */
 
 #include <iostream>
