@@ -7,8 +7,8 @@
     all the content the application will use during its lifetime is loaded into memory.
 
     Note: this implementation is not reliable in a multithreaded environment, however it works generally fine in a single-threaded
-    environment, though interrupts can be problematic. Also, Singletons are a quick answer to a short term issue, and they are difficult
-    to mock for testing when necessary and not scaleable. The dependency injection design pattern is preferable in the vast majority of cases.
+    environment, though interrupts can be problematic. Also, Singletons are difficult to mock for testing when necessary and not 
+    scaleable. The dependency injection design pattern is preferable in the vast majority of cases.
 
     Updated: 2022-07-31
     Author: Jonathan Helsing [github.com/Jonathan-source]
