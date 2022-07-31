@@ -11,7 +11,7 @@
     to mock for testing when necessary and not scaleable. The dependency injection design pattern is preferable in the vast majority of cases.
 
     Updated: 2022-07-31
-    Author: Jonathan Helsing
+    Author: Jonathan Helsing [github.com/Jonathan-source]
 */
 
 
