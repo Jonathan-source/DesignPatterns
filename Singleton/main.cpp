@@ -3,8 +3,8 @@
     This is useful when exactly one object is needed to coordinate actions across the system, for example a Logger or Database class.
     In this particular example I experimented with implementing a persistence manager class specifically for Raylib (not linked with this project),
     but can be tweaked rather easily to fit ones needs. If the current requested resource doesn't exist, the manager will try load and
-    store that resource in memory. This means that we can do a so called 'eager initialization' in the beginning of the program, where
-    we load all the content the application will use during its lifetime.
+    store that resource in memory. This means that a so called 'eager initialization' can be executed in the beginning of the program, where
+    all the content the application will use during its lifetime is loaded into memory.
 
     Note: this implementation is not reliable in a multithreaded environment, however it works generally fine in a single-threaded
     environment, though interrupts can be problematic. Also, Singletons are a quick answer to a short term issue, and they are difficult
