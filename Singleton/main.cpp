@@ -21,13 +21,27 @@
 
 
 // ----------- Remove this when Raylib is linked -----------------
-class Texture {};
-class Font {};
-class Sound {};
+struct Texture {
+    std::string path;
+};
+struct Font {
+    std::string path;
+};
+struct Sound {
+    std::string path;
+};
 
-Texture LoadTexture(const char * str) { return Texture(); }
-Font LoadFont(const char* str) { return Font(); }
-Sound LoadSound(const char* str) { return Sound(); }
+Texture LoadTexture(const char * str) { 
+    Texture texture{ str };
+    return texture;
+}
+Font LoadFont(const char* str) { 
+    Font font{ str };
+    return font;
+}
+Sound LoadSound(const char* str) {
+    Sound sound{ str };
+    return sound; }
 //----------------------------------------------------------------
 
 
@@ -128,6 +142,8 @@ int main()
     }
 
     Texture playerTexture = ResourceManager::Instance().GetTexture("Player.png");
+
+    std::cout << playerTexture.path << std::endl;
 
     return 0;
 }
