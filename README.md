@@ -1,4 +1,3 @@
 # DesignPatterns
 
-Software design patterns are general reusable solutions to problems which occur over and over again in object-oriented design enviroment.
-This github repository presents a few demos of my own home-made examples where I've utilized various design patterns.
+Software design patterns are proven, reusable solutions to common problems that arise in object-oriented design environments. This GitHub repository showcases several of my custom examples, where I’ve applied various design patterns to solve real-world challenges.
